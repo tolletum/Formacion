@@ -3,6 +3,10 @@ package com.in28minuntes.rest.webservices.restfulwebservices.user;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
@@ -10,8 +14,11 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel(description="All details about user")
+@Entity
 public class User {
 
+	@Id
+	@GeneratedValue
 	private Integer id;
 	
 	@Size(min=2, message="Name should have at least 2 characters")
@@ -22,15 +29,18 @@ public class User {
 	@ApiModelProperty(notes="Birth date should be in the past")
 	private Date birthDate;
 	
+	@OneToMany(mappedBy="user")
 	private List<Post> posts;
-
-
-	public User(Integer id, String name, Date birthDate, List<Post> posts) {
+	
+	public User(Integer id, String name, Date birthDate) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.birthDate = birthDate;
-		this.posts = posts;
+	}
+
+	public User() {
+		super();
 	}
 
 	public Integer getId() {
@@ -57,6 +67,11 @@ public class User {
 		this.name = name;
 	}
 
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", birthDate=" + birthDate + "]";
+	}
+
 	public List<Post> getPosts() {
 		return posts;
 	}
@@ -65,11 +80,5 @@ public class User {
 		this.posts = posts;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", birthDate=" + birthDate + ", posts=" + posts + "]";
-	}
-
-	
 	
 }

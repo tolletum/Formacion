@@ -1,0 +1,31 @@
+Respuestas en la pag. 57
+------------------------
+
+1.- 1 - Ok - http://aws.amazon.com/dynamodb/pricing/
+2.- 1 - Ok
+3.- 3 - Ok
+4.- 4 - Ok
+5.- 3 - Ok
+6.- 4 - KO - “Fn::Join” : [“”. [ “http://”, {“Fn::GetAtr” : [ “ElasticLoadBalancer”,”Url”]}]]
+7.- 3 - Ok
+8.- 2 - KO - As per AWS SLA if the instance is attached to an EBS-Optimized instance, then
+the Provisioned IOPS volumes are designed to deliver within 10% of the provisioned IOPS
+performance 99.9% of the time in a given year. Thus, if the user has created a volume of 1000
+IOPS, the user will get a minimum 900 IOPS 99.9% time of the year.
+9.- 3 - KO - Son 10 tags por EC2
+10.- 4 - Ok
+11.- 4 - KO - 2 tipos
+12.- 2 - KO - The SQS message retention period is configurable and can be set anywhere from 1
+minute to 2 weeks. The default is 4 days and once the message retention limit is reached your
+messages will be automatically deleted. The option for longer message retention provides greater
+flexibility to allow for longer intervals between message production and consumption.
+13.- 1 - Ok
+14.- 4 - Ok
+15.- 1 - Ok
+16.- 1 - Ok
+17.- 1 - Ok
+18.- 1 - Ok
+19.- 3 - Ok
+20.- 3 - Ok
+
+Resultado: 15/20 = 75%

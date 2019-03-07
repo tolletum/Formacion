@@ -16,9 +16,9 @@ public class UserDaoService {
 	
 	static {
 		
-		users.add(new User(1, "Adam", new Date(), new ArrayList<>()));
-		users.add(new User(2, "Eve", new Date(), new ArrayList<>()));
-		users.add(new User(3, "Jack", new Date(), new ArrayList<>()));
+		users.add(new User(1, "Adam", new Date()));
+		users.add(new User(2, "Eve", new Date()));
+		users.add(new User(3, "Jack", new Date()));
 	}
 	
 	public List<User> findAll() {
@@ -54,37 +54,37 @@ public class UserDaoService {
 		return null;
 	}
 
-	public List<Post> findAllPosts(int userId) {
-		for(User user : users) {
-			if(user.getId() == userId) {
-				return user.getPosts();
-			}
-		}
-		return null;
-	}
-	
-	public Post findOnePost(int userId, int postId) {
-		for(User user: users) {
-			if(user.getId() == userId) {
-				for(Post post : user.getPosts()) {
-					if(post.getId() == postId) {
-						return post;
-					}
-				}
-			}
-		}
-		return null;
-	}
-
-	public Post savePost(int userId, Post post) {
-		for(User user: users) {
-			if(user.getId() == userId) {
-				if(post.getId() == null) {
-					post.setId(user.getPosts().size() + 1);
-				}
-				user.getPosts().add(post);
-			}
-		}
-		return post;
-	}
+//	public List<Post> findAllPosts(int userId) {
+//		for(User user : users) {
+//			if(user.getId() == userId) {
+//				return user.getPosts();
+//			}
+//		}
+//		return null;
+//	}
+//	
+//	public Post findOnePost(int userId, int postId) {
+//		for(User user: users) {
+//			if(user.getId() == userId) {
+//				for(Post post : user.getPosts()) {
+//					if(post.getId() == postId) {
+//						return post;
+//					}
+//				}
+//			}
+//		}
+//		return null;
+//	}
+//
+//	public Post savePost(int userId, Post post) {
+//		for(User user: users) {
+//			if(user.getId() == userId) {
+//				if(post.getId() == null) {
+//					post.setId(user.getPosts().size() + 1);
+//				}
+//				user.getPosts().add(post);
+//			}
+//		}
+//		return post;
+//	}
 }

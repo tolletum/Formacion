@@ -1,16 +1,25 @@
 package com.in28minuntes.rest.webservices.restfulwebservices.user;
 
-import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
 public class Post {
 	
+	@Id
+	@GeneratedValue
 	private Integer id;
 	
-	private String title;
-	
-	private String text;
-	
-	private Date creationDate;
+	private String description;
+
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JsonIgnore
+	private User user;
 
 	public Integer getId() {
 		return id;
@@ -20,33 +29,26 @@ public class Post {
 		this.id = id;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	public String getText() {
-		return text;
+	public User getUser() {
+		return user;
 	}
 
-	public void setText(String text) {
-		this.text = text;
-	}
-
-	public Date getCreationDate() {
-		return creationDate;
-	}
-
-	public void setCreationDate(Date creationDate) {
-		this.creationDate = creationDate;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	@Override
 	public String toString() {
-		return "Post [id=" + id + ", title=" + title + ", text=" + text + ", creationDate=" + creationDate + "]";
+		return "Post [id=" + id + ", description=" + description + "]";
 	}
-
+	
+	
 }
