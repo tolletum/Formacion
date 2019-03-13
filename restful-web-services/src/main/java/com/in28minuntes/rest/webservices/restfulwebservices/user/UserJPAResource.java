@@ -29,6 +29,9 @@ public class UserJPAResource {
 	@Autowired
 	private UserRepository userRepository;
 	
+	@Autowired
+	private PostRepository postRepository;
+	
 	@GetMapping("/jpa/users")
 	public List<User> retrieveAll() {
 		return userRepository.findAll();
@@ -78,7 +81,27 @@ public class UserJPAResource {
 		}
 		return user.get().getPosts();
 	}
-//
+
+	@PostMapping("/jpa/users/{userId}/posts")
+	public ResponseEntity<Object> createPost(@PathVariable int userId, @RequestBody Post post) {
+		
+		Optional<User> userOptional = userRepository.findById(userId);
+		
+		if(!userOptional.isPresent()) {
+			throw new USerNotFoundException("id-" + userId);
+		}
+		
+		User user = userOptional.get();
+
+		post.setUser(user);
+		
+		postRepository.save(post);
+		
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{postId}").buildAndExpand(post.getId()).toUri();
+		
+		return ResponseEntity.created(location).build();
+	}
+
 //	@GetMapping("/users/{id}/posts/{postId}")
 //	public Post findOnePost(@PathVariable int id, @PathVariable int postId) {
 //		Post post =  userService.findOnePost(id, postId);
@@ -88,21 +111,6 @@ public class UserJPAResource {
 //		}
 //		
 //		return post;
-//	}
-//	
-//	@PostMapping("/users/{userId}/posts")
-//	public ResponseEntity<Object> createPost(@PathVariable int userId, @RequestBody Post post) {
-//		
-//		if(post == null || post.getTitle() == null 
-//				|| post.getText() == null || post.getCreationDate() == null) {
-//			throw new BadRequest("Parameters must not be null");
-//		}
-//		
-//		Post savedPost = userService.savePost(userId, post);
-//		
-//		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{postId}").buildAndExpand(post.getId()).toUri();
-//		
-//		return ResponseEntity.created(location).build();
 //	}
 //	
 }
