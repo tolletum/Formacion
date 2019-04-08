@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+</head>
+<body>
+    <h1>Register</h1>
+
+    <form action="">
+        <div>
+            <label for="firstName">First name:</label>
+            <input id="firstName" type="text" name="firstName" required>
+            <label for="lastName">Last name:</label>
+            <input id="lastName" type="text" name="lastName" required>
+        </div>
+
+        <div>
+            <label for="male">Male</label>
+            <input id="male" type="radio" name="gender" value="male">
+            <label for="female">Female</label>
+            <input id="female" type="radio" name="gender" value="female">
+            <label for="other">Other</label>
+            <input id="other" type="radio" name="gender" value="other">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="email" required>
+            <label for="password">Password:</label>
+            <input id="password" type="password" name="password" pattern=".{5,10}" required title="5 to 10 characters">
+        </div>
+        <div>
+            <label for="birthdate">Birthdate:</label>
+            <select name="month" id="birthdate">
+                <option value="">Month</option>
+                <option value="Enero">Enero</option>
+                <option value="Febrero">Febrero</option>
+                <option value="Marzo">Marzo</option>
+            </select>
+            <select name="day" id="birthdate">
+                <option value="">Day</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <select name="year" id="birthdate">
+                <option value="">Year</option>
+                <option value="1973">1973</option>
+                <option value="1974">1974</option>
+                <option value="1975">1975</option>
+            </select>
+        </div>
+        <div>
+            <label for="agree">I agree to the terms and conditions:</label>
+            <input id="agree" type="checkbox" name="agree" >
+        </div>
+        <input type="submit">
+    </form>
+</body>
+</html>
