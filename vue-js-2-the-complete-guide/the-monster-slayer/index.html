@@ -41,7 +41,12 @@
         <div class="small-12 columns">
             <button id="attack" @click="attack">ATTACK</button>
             <button id="special-attack" @click="specialAttack">SPECIAL ATTACK</button>
-            <button id="heal" @click="heal">HEAL</button>
+            <template v-if="healsNumber >= 4">
+                <button id="heal" @click="heal" disabled>HEAL</button>
+            </template>
+            <template v-else>
+                <button id="heal" @click="heal">HEAL</button>
+            </template>
             <button id="give-up" @click="giveUp">GIVE UP</button>
         </div>
     </section>

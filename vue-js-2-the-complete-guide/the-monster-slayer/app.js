@@ -4,7 +4,9 @@ new Vue({
         playerHealth: 100,
         monsterHealth: 100,
         gameIsRunning: false,
-        turns: []
+        turns: [],
+        healsNumber: 0,
+        specialAttacksNumber: 0,
     },
     methods: {
         startGame: function() {
@@ -12,6 +14,7 @@ new Vue({
             this.playerHealth = 100;
             this.monsterHealth = 100;
             this.turns = [];
+            this.healsNumber = 0;
         },
         attack: function() {
             var damage = this.calculateDamage(3, 10);
@@ -39,7 +42,14 @@ new Vue({
 
             this.monsterAttack();
         },
-        heal: function() {
+        heal: function(event) {
+            this.healsNumber++;
+            if(this.healsNumber >= 4) {
+                console.log(event.target);
+                event.target.disabled = true;
+            } else {
+                event.target.disabled = false;
+            }
             if(this.playerHealth <= 90) {
                 this.playerHealth += 10;
             } else {
