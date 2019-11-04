@@ -65,3 +65,23 @@ The starting project can be found on JSFiddle: https://jsfiddle.net/smax/c4mcxu7
 ### Useful Links:
 
 * Official Docs - The Vue Instance: http://vuejs.org/guide/instance.html
+
+---
+
+## Sección 7: An Introduction to Components
+
+If you want to learn more about VueJS Components, you may want to have a look at this Article from the official Docs (important: It does cover Topics which will be taught in the next Course Modules!): http://vuejs.org/guide/components.html
+
+Also see: https://vuejs.org/v2/guide/components-registration.html
+
+---
+
+## Sección 8: Communicating between Components
+
+The full source code can be found in ./communication-between-components/ folder.
+
+### Useful Links:
+
+* Official Docs - Props: http://vuejs.org/guide/components.html#Props
+* Official Docs - Custom Events: http://vuejs.org/guide/components.html#Custom-Events
+* Official Docs - Non-Parent-Child Communication: http://vuejs.org/guide/components.html#Non-Parent-Child-Communication
