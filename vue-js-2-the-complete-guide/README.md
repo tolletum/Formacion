@@ -85,3 +85,13 @@ The full source code can be found in ./communication-between-components/ folder.
 * Official Docs - Props: http://vuejs.org/guide/components.html#Props
 * Official Docs - Custom Events: http://vuejs.org/guide/components.html#Custom-Events
 * Official Docs - Non-Parent-Child Communication: http://vuejs.org/guide/components.html#Non-Parent-Child-Communication
+
+---
+
+## Sección 9: Advanced Component Usage
+
+### Helpful Links:
+
+Official Docs - Slots: http://vuejs.org/guide/components.html#Content-Distribution-with-Slots
+Official Docs - Dynamic Components: http://vuejs.org/guide/components.html#Dynamic-Components
+Official Docs - Misc: http://vuejs.org/guide/components.html#Misc
