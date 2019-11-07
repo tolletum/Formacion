@@ -10,15 +10,6 @@
                 <component :is="frameColorName">
                     <h2>This is {{ colorName }} frame!</h2>
                 </component>
-                <!-- <app-blue>
-                    <h2>This is blue frame!</h2>
-                </app-blue>
-                <app-green>
-                    <h2>This is green frame!</h2>
-                </app-green>
-                <app-red>
-                    <h2>This is red frame!</h2>
-                </app-red> -->
             </div>
         </div>
     </div>
