@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" @input="nameModified(value)" id="fullName" class="form-control" />
+    <input type="text" @blur="nameModified($event.target.value)" id="fullName" class="form-control" />
   </div>
 </template>
 
@@ -9,7 +9,6 @@ export default {
   props: ["value"],
   methods: {
     nameModified(fullName) {
-      console.log("Entro en el metodo para el evento: " + fullName);
       this.$emit("input", fullName);
     }
   }
