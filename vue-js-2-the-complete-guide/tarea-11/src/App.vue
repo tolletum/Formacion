@@ -19,10 +19,7 @@
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
           <h1>Sign up</h1>
           <hr />
-          <div class="form-group">
-            <label for="Full Name">Full Name</label>
-            <app-full-name v-model="fullName"></app-full-name>
-          </div>
+          <app-full-name v-model="fullName"></app-full-name>
           <div class="form-group">
             <label for="email">Mail</label>
             <input type="text" id="email" class="form-control" v-model="email" />
@@ -74,7 +71,7 @@ import FullName from "./components/FullName.vue";
 export default {
   data() {
     return {
-      fullName: "",
+      fullName: "Alberto Barrajón",
       email: "",
       password: "",
       storeData: "No",
