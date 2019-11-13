@@ -95,3 +95,19 @@ The full source code can be found in ./communication-between-components/ folder.
 Official Docs - Slots: http://vuejs.org/guide/components.html#Content-Distribution-with-Slots
 Official Docs - Dynamic Components: http://vuejs.org/guide/components.html#Dynamic-Components
 Official Docs - Misc: http://vuejs.org/guide/components.html#Misc
+
+---
+
+## Sección 11: Handling User Input with Forms
+
+### Useful Links
+
+Official Docs - Forms: http://vuejs.org/guide/forms.html
+
+---
+
+## Sección 12: Using and Creating Directives
+
+### Useful links
+
+Official Docs - Custom Directives: http://vuejs.org/guide/custom-directive.html
