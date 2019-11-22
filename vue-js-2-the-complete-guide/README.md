@@ -111,3 +111,12 @@ Official Docs - Forms: http://vuejs.org/guide/forms.html
 ### Useful links
 
 Official Docs - Custom Directives: http://vuejs.org/guide/custom-directive.html
+
+---
+
+## Seccióm 13: Improving your App with Filters and Mixins
+
+### Useful links
+
+Official Docs - Filters: https://vuejs.org/v2/guide/filters.html
+Official Docs - Mixins: http://vuejs.org/guide/mixins.html
