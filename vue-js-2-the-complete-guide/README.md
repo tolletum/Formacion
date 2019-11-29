@@ -131,3 +131,12 @@ The full source code can be found in ./communication-between-components/ folder.
 - Some Code Recipes for vue-resource: https://github.com/yyx990803/vue-resource/blob/master/docs/recipes.md
 - Template URLs: https://medialize.github.io/URI.js/uri-template.html
 - Requests and Responses (incl. Different File Formats): https://github.com/yyx990803/vue-resource/blob/master/docs/http.md
+
+---
+
+## Sección 16: Routing in a VueJS Application
+
+### Useful Links:
+
+- vue-router Github Page: https://github.com/vuejs/vue-router
+- vue-router Documentation:https://router.vuejs.org/en/
