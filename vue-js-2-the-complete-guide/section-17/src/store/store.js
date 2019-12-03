@@ -1,18 +1,21 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import counter from './modules/counter';
+
+import actions from './actions';
+import getters from './getters';
+import mutations from './mutations';
 
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
-  state: {
-    counter: 0
-  },
-  getters: {
-    doubleCounter: state => {
-      return state.counter * 2;
+    state: {
+        value: 0
     },
-    stringCounter: state => {
-      return `${state.counter} Clicks`;
+    getters,
+    mutations,
+    actions,
+    modules: {
+        counter
     }
-  }
-})
+});
