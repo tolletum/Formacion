@@ -140,3 +140,38 @@ The full source code can be found in ./communication-between-components/ folder.
 
 - vue-router Github Page: https://github.com/vuejs/vue-router
 - vue-router Documentation:https://router.vuejs.org/en/
+
+---
+
+## Sección 17: Better State Management with Vuex
+
+### Useful Links:
+
+- Vuex Github Page: https://github.com/vuejs/vuex
+- Vuex Documenation: https://vuex.vuejs.org/en/
+
+---
+
+## Sección 22: Bonus: Using Axios instead of vue-resource
+
+### Useful Links:
+
+- Axios: https://github.com/axios/axios
+
+---
+
+## Sección 23: Bonus: Authentication in Vue Apps
+
+### Useful Links:
+
+- More about JWT: https://jwt.io/
+- Firebase Auth REST API Docs: https://firebase.google.com/docs/reference/rest/auth/
+- Authenticating Requests to the Firebase Database REST Endpoints: https://firebase.google.com/docs/database/rest/auth
+
+---
+
+## Sección 24: Bonus: Form Input Validation
+
+### Useful Links:
+
+- Vuelidate Docs: https://github.com/vuelidate/vuelidate
